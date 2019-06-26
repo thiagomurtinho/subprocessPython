@@ -7,8 +7,10 @@ def callSubprocess():
                 'subprocess01.py',
                 'Rodando'
             ],
-                shell=True
+                stdout = subprocess.PIPE,
+                shell = True
             )
-
+    print(spReturn.communicate())
+    
 if __name__ == "__main__":
     callSubprocess()

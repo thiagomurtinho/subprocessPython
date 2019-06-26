@@ -6,3 +6,4 @@ def runSubprocess(argv):
 
 if __name__ == "__main__":
     runSubprocess(sys.argv)
+    exit(1)
