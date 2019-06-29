@@ -8,9 +8,12 @@ def callSubprocess():
                 'Rodando'
             ],
                 stdout = subprocess.PIPE,
+                stderr = subprocess.STDOUT,
                 shell = True
             )
-    print(spReturn.communicate())
+    output, stderr = spReturn.communicate()
+    print('output > %s' %output)
+    print('stderr > %s' %stderr)
     
 if __name__ == "__main__":
     callSubprocess()

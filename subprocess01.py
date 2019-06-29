@@ -1,9 +1,11 @@
 import sys
 
 def runSubprocess(argv):
-    print(argv[1])
-    
+    try:
+        sys.stdout(1)
+    except Exception as e:
+        print('error: %s'%e)
+        return(123)
 
 if __name__ == "__main__":
-    runSubprocess(sys.argv)
-    exit(1)
+    rrunSubprocess(sys.argv)
